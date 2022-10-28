@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+
+  - name: bank_statement
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      This is the bank statement.
+
+    depends_on:
+      - ref('stage_bank_statements')
+      - ref('stage_bank_statement_lines')
+      - source('bank','bank_statements')
+
+    owner:
+      name: CTTC
+      email: contact@datawater.co

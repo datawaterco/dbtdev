@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bank
+    tables:
+      - name: bank_statements
+      - name: bank_statement_lines
+
+  - name: stripe
+    tables:
+      - name: payments
